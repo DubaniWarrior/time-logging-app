@@ -3,8 +3,8 @@ import TimerForm from './TimerForm';
 import Timer from './Timer';
 
 const EditableTimer = (props) => {
-    const {editFromOpen, title, project, elapsed, runningSince} = props;
-    if (editFromOpen) {
+    const {editFormOpen, title, project, elapsed, runningSince} = props;
+    if (editFormOpen) {
         return (<TimerForm title={title} project={project}/>)
     } else {
         return (<Timer

@@ -1,0 +1,23 @@
+.content {
+    font-size: 1.6rem;
+}
+
+.timer-form {
+    border: 3px solid #098b3f;
+    border-radius: 5px;
+    margin-bottom: 6rem;
+    box-shadow: -1px 2px 30px 5px rgba(0, 0, 0, 1);
+    padding: $sm-size;
+}
+
+.btn-outline-danger {
+    font-size: 2rem;
+    border: 3px solid #EA4361;
+    border-radius: 150px;
+    color: #EA4361;
+
+    &:hover {
+        background-color: #EA4361;
+        border: 3px solid #EA4361;
+    }
+}
