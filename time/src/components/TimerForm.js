@@ -11,7 +11,7 @@ const TimerForm = (props) => {
         <Col className='timer-form'>
 
             <div className="content">
-                <form class>
+                <form>
                     <div className="form-group text-left">
                         <label htmlFor="title">
                             <strong>Title</strong>

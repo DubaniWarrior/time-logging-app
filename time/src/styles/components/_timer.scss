@@ -19,23 +19,3 @@
 .description {
     font-size: 23rem;
 }
-
-.btn-start {
-    position: absolute;
-    top: 65%;
-    width: 40%;
-    left: 30%;
-
-}
-
-.btn-outline-primary {
-    font-size: 2rem;
-    border: 3px solid #09558b;
-    border-radius: 150px;
-    color: #09558b;
-
-    &:hover {
-        background-color: #09558b;
-        border: 3px solid #09558b;
-    }
-}

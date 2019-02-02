@@ -1,24 +1,27 @@
 import React from 'react'
 import EditableTimer from './EditableTimer';
 
-const EditableTimerList = () => {
-    return (
-        <div>
-            <EditableTimer
-                title='Learn React'
-                project='Nuage progress'
-                elapsed='8986300'
-                runningSince={null}
-                editFormOpen={false}/>
-            <EditableTimer
-                title='Learn Classic Chess'
-                project='Grand Master'
-                elapsed='7362899'
-                runningSince={null}
-                editFormOpen={true}/>
+const EditableTimerList = (props) => {
 
+    const timers = props
+        .timers
+        .map((timer) => (
+            <div>
+                <EditableTimer
+                    key={timer.id}
+                    id={timer.id}
+                    title={timer.title}
+                    project={timer.project}
+                    elapsed={timer.elapsed}
+                    runningSince={timer.runningSince}/>
+            </div>
+        ));
+    return (
+        <div id='timers'>
+            {timers}
         </div>
     )
+
 }
 
 export default EditableTimerList;

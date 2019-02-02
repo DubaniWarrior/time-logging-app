@@ -1,6 +1,7 @@
 import React from 'react';
 import {Col} from 'reactstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 import helpers from '../js/helpers';
 
 const Timer = (props) => {
@@ -22,8 +23,8 @@ const Timer = (props) => {
                         </h1>
                     </div>
                     <div className="extra content my-2">
-                        <span className="float-right"><FontAwesomeIcon icon='edit'/></span>
-                        <span className="float-right"><FontAwesomeIcon icon='trash-alt'/></span>
+                        <span className="float-right ml-3"><FontAwesomeIcon icon={faEdit}/></span>
+                        <span className="float-right"><FontAwesomeIcon icon={faTrashAlt}/></span>
                     </div>
                 </div>
                 <div className='btn-start'>
