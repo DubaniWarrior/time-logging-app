@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-window.client = (function () {
+window.client = (function() {
   function getTimers(success) {
     return fetch('/api/timers', {
       headers: {
         Accept: 'application/json',
       },
-    }).then(checkStatus)
+    })
+      .then(checkStatus)
       .then(parseJSON)
       .then(success);
   }
@@ -16,7 +17,7 @@ window.client = (function () {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     }).then(checkStatus);
@@ -27,7 +28,7 @@ window.client = (function () {
       method: 'put',
       body: JSON.stringify(data),
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     }).then(checkStatus);
@@ -38,7 +39,7 @@ window.client = (function () {
       method: 'delete',
       body: JSON.stringify(data),
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     }).then(checkStatus);
@@ -49,7 +50,7 @@ window.client = (function () {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     }).then(checkStatus);
@@ -60,7 +61,7 @@ window.client = (function () {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
     }).then(checkStatus);
@@ -90,4 +91,4 @@ window.client = (function () {
     stopTimer,
     deleteTimer,
   };
-}());
+})();
