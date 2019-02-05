@@ -5,7 +5,10 @@ import {faPlus} from '@fortawesome/free-solid-svg-icons';
 
 export default class ToggleableTimerForm extends Component {
     state = {
-        isOpen: false
+        isOpen: false,
+        id: '',
+        title: '',
+        project: ''
     };
 
     handleFormOpen = () => {
@@ -14,9 +17,19 @@ export default class ToggleableTimerForm extends Component {
         });
     };
 
+    handleFormSubmit = (timer) => {
+        this
+            .props
+            .onFormSubmit(timer);
+        this.setState({isOpen: false})
+
+    }
+
     render() {
         if (this.state.isOpen) {
-            return <TimerForm/>;
+            return <TimerForm
+                handleFormClose={this.handleFormOpen}
+                onFormSubmit={this.handleFormSubmit}/>;
         } else {
             return (
                 <div className="content text-center">
