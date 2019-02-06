@@ -13,7 +13,10 @@ const EditableTimerList = props => {
           project={timer.project}
           elapsed={timer.elapsed}
           runningSince={timer.runningSince}
-          onFormSubmit={this.props.onFormSubmit}/>
+          onFormSubmit={props.onFormSubmit}
+          onFormDelete={props.onFormDelete}
+          onStartClick={props.onStartClick}
+          onStopClick={props.onStopClick}/>
       </div>
     ));
   return <div id="timers">{timers}</div>;
